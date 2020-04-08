@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="global_info_card_deaths_label" translatable="true">Mortos</string>
+    <string name="global_info_card_infected_label" translatable="true">Infectados</string>
+    <string name="global_info_card_recovered_label" translatable="true">Recuparados</string>
+    <string name="growing_curve_title" translatable="true">Curva de crescimento</string>
+    <string name="allow" translatable="true">Permitir</string>
+    <string name="no" translatable="true">Não</string>
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "726446698434",
+    "firebase_url": "https://coronatime-5f2d1.firebaseio.com",
+    "project_id": "coronatime-5f2d1",
+    "storage_bucket": "coronatime-5f2d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726446698434:android:064e1f2440c9da3764305b",
+        "android_client_info": {
+          "package_name": "io.henrikhorbovyi.coronatime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "726446698434-8guktvn35jcqamrfqqrramqrsbvtkvph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ5e97YdpSVZacYptICr-GJAhcm8434Ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "726446698434-8guktvn35jcqamrfqqrramqrsbvtkvph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

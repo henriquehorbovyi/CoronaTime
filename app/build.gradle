@@ -1,0 +1,134 @@
+
+plugins {
+    id 'com.gladed.androidgitversion' version '0.4.9'
+    // id("com.github.triplet.play") version "2.6.2"
+}
+
+androidGitVersion {
+    format '%tag%%-count%%-commit%%-dirty%'
+    baseCode = 000000001
+    codeFormat = 'MNNPPBBB'
+    prefix = 'v'
+}
+
+
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "io.henrikhorbovyi.coronatime"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    signingConfigs {
+
+        debug {
+           /* storeFile file("../keystore/app-key.jks")
+            storePassword APP_SIGN_KEY_PASSWORD_STORE
+            keyAlias APP_SIGN_KEY_ALIAS
+            keyPassword APP_SIGN_KEY_PASSWORD*/
+        }
+
+        release {
+            storeFile file("../keystore/app-key.jks")
+            storePassword APP_SIGN_KEY_PASSWORD_STORE
+            keyAlias APP_SIGN_KEY_ALIAS
+            keyPassword APP_SIGN_KEY_PASSWORD
+        }
+    }
+
+    buildTypes {
+
+        all {
+            buildConfigField 'String', "CORONA_API", CORONA_API
+            buildConfigField 'String', "CORONA_API_V2", CORONA_API_V2
+        }
+
+        debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "com.google.android.material:material:1.1.0"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.preference:preference:1.1.0"
+    implementation "androidx.preference:preference-ktx:1.1.0"
+    implementation "androidx.work:work-runtime-ktx:2.3.4"
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.github.majorkik:SparkLineLayout:1.0.1'
+    
+    implementation "com.airbnb.android:lottie:3.0.7"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:2.2.1"
+    implementation "androidx.navigation:navigation-ui-ktx:2.2.1"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3"
+
+    implementation "org.koin:koin-android:2.0.1"
+    implementation "org.koin:koin-androidx-viewmodel:2.0.1"
+    implementation "org.koin:koin-android-scope:1.0.0"
+    implementation "org.koin:koin-test:1.0.0"
+
+    implementation "com.squareup.retrofit2:retrofit:2.6.1"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.2.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.6.1"
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation "com.google.android.gms:play-services-location:17.0.0"
+
+    implementation "com.google.firebase:firebase-core:17.3.0"
+    implementation "com.google.firebase:firebase-analytics:17.3.0"
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta03'
+
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="global_info_card_corner_radius">12dp</dimen>
+    <dimen name="global_card_width">100dp</dimen>
+    <dimen name="search_view_radius">8dp</dimen>
+    <dimen name="global_info_card_elevation">0dp</dimen>
+    <dimen name="global_graph_card_radius">16dp</dimen>
+</resources>

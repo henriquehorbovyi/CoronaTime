@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="global_info_card_deaths_label" translatable="true">Смерть</string>
+    <string name="global_info_card_infected_label" translatable="true">Заражений</string>
+    <string name="global_info_card_recovered_label" translatable="true">Відновлено</string>
+    <string name="growing_curve_title" translatable="true">Крива зростання</string>
+    <string name="allow" translatable="true">дозволяють</string>
+    <string name="no" translatable="true">ні</string>
+</resources>

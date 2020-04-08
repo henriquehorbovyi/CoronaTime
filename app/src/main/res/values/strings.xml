@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">Corona Map</string>
+    <string name="global_info_card_deaths_label" translatable="true">Deaths</string>
+    <string name="global_info_card_infected_label" translatable="true">Infected</string>
+    <string name="global_info_card_recovered_label" translatable="true">Recovered</string>
+    <string name="growing_curve_title" translatable="true">Growth curve</string>
+    <string name="allow" translatable="true">Allow</string>
+    <string name="no" translatable="true">No</string>
+</resources>
