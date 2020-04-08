@@ -1,7 +1,13 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://oss.sonatype.org/content/repositories/releases' }
+    }
+}
 
 plugins {
     id 'com.gladed.androidgitversion' version '0.4.9'
-    // id("com.github.triplet.play") version "2.6.2"
 }
 
 androidGitVersion {
@@ -10,8 +16,6 @@ androidGitVersion {
     codeFormat = 'MNNPPBBB'
     prefix = 'v'
 }
-
-
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
@@ -29,9 +33,12 @@ android {
         applicationId "io.henrikhorbovyi.coronatime"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode androidGitVersion.code()
+        logger.error("Version Code = ${versionCode}")
+        versionName androidGitVersion.name()
+        logger.error("Version Name = ${versionName}")
 
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
