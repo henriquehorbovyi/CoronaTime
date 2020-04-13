@@ -1,5 +1,9 @@
 # Built application files
 *.apk
+<<<<<<< HEAD
+=======
+*.aar
+>>>>>>> e969180cc3faf4c61495611497a7c5702549471c
 *.ap_
 *.aab
 
@@ -19,7 +23,10 @@ out/
 # Gradle files
 .gradle/
 build/
+<<<<<<< HEAD
 buildSrc/build/*
+=======
+>>>>>>> e969180cc3faf4c61495611497a7c5702549471c
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -38,6 +45,7 @@ captures/
 
 # IntelliJ
 *.iml
+<<<<<<< HEAD
 .idea/misc.xml
 .idea/*
 
@@ -46,6 +54,28 @@ captures/
 
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
+=======
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+# Android Studio 3 in .gitignore file.
+.idea/caches
+.idea/modules.xml
+# Comment next line if keeping position of elements in Navigation Editor is relevant for you
+.idea/navEditor.xml
+
+# Keystore files
+# Uncomment the following lines if you do not want to check your keystore files in.
+#*.jks
+#*.keystore
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+.cxx/
+>>>>>>> e969180cc3faf4c61495611497a7c5702549471c
 
 # Google Services (e.g. APIs or Firebase)
 # google-services.json
@@ -71,8 +101,11 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+<<<<<<< HEAD
 
 # Releases
 app/debug
 app/homolog
 app/release
+=======
+>>>>>>> e969180cc3faf4c61495611497a7c5702549471c
