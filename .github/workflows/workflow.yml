@@ -12,7 +12,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     runs-on: ubuntu-latest
-    container: henrikhorbovyi/openjdk-ci-android
+    container: henrikhorbovyi/openjdk-ci-android:api-28.firebase_dritribution
     steps:
     - uses: actions/checkout@v2
 
