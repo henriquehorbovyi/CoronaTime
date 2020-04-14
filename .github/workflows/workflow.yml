@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-name: CI 
+name: CI
 
 on:
   push:
@@ -10,19 +10,19 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+#   build:
+#     runs-on: ubuntu-latest
+#     container: henrikhorbovyi/openjdk-ci-android:api-28.firebase_dritribution
+#     steps:
+#       - if: runner
+#       - uses: actions/checkout@v2
+
+#       - name: Production
+#         run: ./gradlew assemble
+
+  tests:
     runs-on: ubuntu-latest
     container: henrikhorbovyi/openjdk-ci-android:api-28.firebase_dritribution
     steps:
-    - uses: actions/checkout@v2
-
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
-
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project,
-        firebase --version
+      - name: All Tests
+        run: ./gradlew test 
