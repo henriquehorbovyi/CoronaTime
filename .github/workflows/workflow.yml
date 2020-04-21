@@ -25,4 +25,5 @@ jobs:
     container: henrikhorbovyi/openjdk-ci-android:api-28.firebase_dritribution
     steps:
       - name: All Tests
-        run: ../.././gradlew test
+        run: cd |
+          ls
